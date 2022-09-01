@@ -6,13 +6,15 @@ on:
       - release
   pull_request:
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install dependencies
         working-directory: ./main
         run: npm i
       - name: Build Docker image
         working-directory: ./main
         run: docker build . -t mocks-server:main
+      - name: Run tests
+        run: npm run test
