@@ -1,4 +1,4 @@
-import crossSpawn  from "cross-spawn";
+import crossSpawn from "cross-spawn";
 import treeKill from "tree-kill";
 
 import Logs from "./SpawnerLogs";

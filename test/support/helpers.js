@@ -20,7 +20,7 @@ function serverUrl(port, protocol) {
   return `${protocolToUse}://${DEFAULT_SERVER_HOST}:${serverPort(port)}`;
 }
 
-export function doFetch (uri, options = {}) {
+export function doFetch(uri, options = {}) {
   const requestOptions = {
     ...defaultRequestOptions,
     ...options,
