@@ -10,11 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Install dependencies
+      - name: Install Docker image dependencies
         working-directory: ./main
         run: npm i
       - name: Build Docker image
         working-directory: ./main
         run: docker build . -t mocks-server:main
+      - name: Install test dependencies
+        run: npm ci
       - name: Run tests
         run: npm run test
