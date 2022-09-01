@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "dependencies": {
+    "@mocks-server/main": "3.11.0"
+  },
+  "scripts": {
+    "start": "mocks-server"
+  }
+}
