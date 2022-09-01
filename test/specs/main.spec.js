@@ -8,11 +8,7 @@ describe("main image", () => {
     beforeAll(async () => {
       dockerProcess = new Spawner([
         "docker", "run", "-p", "3100:3100", "-p", "3110:3110", "mocks-server:main"
-      ], {
-        logs: {
-          silent: false
-        }
-      });
+      ]);
       await waitForServerUrl("/api/users");
     });
   
