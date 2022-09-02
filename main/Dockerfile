@@ -1,7 +1,6 @@
 FROM node:18.8.0
 
 LABEL maintainer="Javier Brea <info@mocks-server.org>"
-LABEL version="0.0.1"
 LABEL description="Mock server running live, interactive mocks in place of real APIs"
 
 WORKDIR /usr/app
