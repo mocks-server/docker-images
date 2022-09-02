@@ -15,10 +15,10 @@ jobs:
       - name: Run lint
         run: npm run lint
       - name: Install Docker image dependencies
-        working-directory: ./main
+        working-directory: ./images/main
         run: npm i
       - name: Build Docker image
-        working-directory: ./main
+        working-directory: ./images/main
         run: docker build . -t mocks-server:main
       - name: Run tests
         run: npm run test

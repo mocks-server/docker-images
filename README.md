@@ -25,7 +25,7 @@ For running tests locally, follow the next steps:
   ```
 * Build the Docker image and tag it as `mocks-server:main`
   ```sh
-  cd main
+  cd images/main
   docker build . -t mocks-server:main
   ```
 * Run the tests using the NPM script in the root folder:
