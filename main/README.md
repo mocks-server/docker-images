@@ -67,7 +67,7 @@ docker run -ti -p 3100:3100 -p 3110:3110 \
 The Docker image includes some pre-configuration to make easier to use the app through Docker, but you can change these options using environment variables as well in case you want to customize your container:
 
 * `MOCKS_PLUGINS_INQUIRER_CLI_ENABLED=false`. The interactive CLI is disabled by default
-* `MOCKS_FILES_PATH=/input/mocks`. The mocks path is set inside the `/input` folder by default.
+* `MOCKS_FILES_PATH=/input/mocks`. The mocks path is set as `/input/mocks` by default.
 * `MOCKS_CONFIG_FILE_SEARCH_FROM=/input`. The configuration file is expected to be in the `/input` folder.
 
 > ⚠️ CAUTION
