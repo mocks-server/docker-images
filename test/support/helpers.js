@@ -63,25 +63,13 @@ export function fixturesPath(subPath) {
 }
 
 export async function cleanDocker() {
-  const pruneContainersProcess = new Spawner(["docker", "container", "prune", "-f"], {
-    logs: {
-      silent: false,
-    },
-  });
+  const pruneContainersProcess = new Spawner(["docker", "container", "prune", "-f"]);
   await pruneContainersProcess.hasExited();
-  const listVolumesProcess = new Spawner(["docker", "volume", "ls", "-q"], {
-    logs: {
-      silent: false,
-    },
-  });
+  const listVolumesProcess = new Spawner(["docker", "volume", "ls", "-q"]);
   await listVolumesProcess.hasExited();
   const volumes = listVolumesProcess.logs.lines;
   if (volumes.length) {
-    const process = new Spawner(["docker", "volume", "rm", ...volumes], {
-      logs: {
-        silent: false,
-      },
-    });
+    const process = new Spawner(["docker", "volume", "rm", ...volumes]);
     await process.hasExited();
   }
 }
