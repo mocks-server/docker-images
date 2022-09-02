@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "scripts": {
+    "prepare": "is-ci || husky install",
+    "test": "jest --runInBand",
+    "lint": "eslint *.js test",
+    "lint-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "@babel/core": "7.18.13",
+    "@babel/eslint-parser": "7.18.9",
+    "@babel/preset-env": "7.18.10",
+    "babel-jest": "27.5.1",
+    "cross-fetch": "3.1.5",
+    "cross-spawn": "7.0.3",
+    "eslint": "8.22.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-jest": "26.7.0",
+    "eslint-plugin-no-only-tests": "2.6.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "jest": "27.5.1",
+    "husky": "7.0.4",
+    "is-ci": "3.0.1",
+    "lint-staged": "12.5.0",
+    "strip-ansi": "6.0.0",
+    "tree-kill": "1.2.2",
+    "wait-on": "6.0.1"
+  },
+  "lint-staged": {
+    "test/**/*.js": "eslint",
+    "*.js": "eslint"
+  }
+}
