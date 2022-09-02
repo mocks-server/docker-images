@@ -22,7 +22,7 @@
     "husky": "7.0.4",
     "is-ci": "3.0.1",
     "lint-staged": "12.5.0",
-    "strip-ansi": "6.0.0",
+    "strip-ansi": "6.0.1",
     "tree-kill": "1.2.2",
     "wait-on": "6.0.1"
   },
