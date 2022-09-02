@@ -7,7 +7,6 @@ Docker images with [Mocks Server](https://www.mocks-server.org) dependencies and
 Next Docker images are hosted in this repository:
 
 * [mocksserver/main](https://hub.docker.com/repository/docker/mocksserver/main) - Docker image with `@mocks-server/main` NPM distribution installed and pre-configured.
-  * Docker Hub
 
 # Development
 
