@@ -44,7 +44,6 @@ class Spawner {
       this._cliProcess.stderr.on("data", this._logger.log);
 
       this._cliProcess.on("close", (code) => {
-        console.log("Process closed!!");
         this._exitCode = code;
         this._resolveExitPromise();
       });

@@ -1,5 +1,9 @@
+import path from "path";
+
 import waitOn from "wait-on";
 import crossFetch from "cross-fetch";
+
+import Spawner from "./Spawner";
 
 const DEFAULT_SERVER_PORT = 3100;
 const DEFAULT_SERVER_HOST = "127.0.0.1";
@@ -52,4 +56,40 @@ export function waitForServer(port) {
 
 export function waitForServerUrl(url, options = {}) {
   return waitOn({ resources: [`${serverUrl(options.port, options.protocol)}${url}`] });
+}
+
+export function fixturesPath(subPath) {
+  return path.resolve(__dirname, "..", "fixtures", subPath);
+}
+
+export async function cleanDocker() {
+  const pruneContainersProcess = new Spawner(["docker", "container", "prune", "-f"], {
+    logs: {
+      silent: false,
+    },
+  });
+  await pruneContainersProcess.hasExited();
+  const listVolumesProcess = new Spawner(["docker", "volume", "ls", "-q"], {
+    logs: {
+      silent: false,
+    },
+  });
+  await listVolumesProcess.hasExited();
+  const volumes = listVolumesProcess.logs.lines;
+  if (volumes.length) {
+    const process = new Spawner(["docker", "volume", "rm", ...volumes], {
+      logs: {
+        silent: false,
+      },
+    });
+    await process.hasExited();
+  }
+}
+
+export function wait(time = 2000) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, time);
+  });
 }
