@@ -9,6 +9,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 ### Fixed
 ### Removed
 
+## [4.0.1] - 2023-04-09
+
+### Changed
+- chore(deps): Update to @mocks-server/main@4.0.1
+
 ## [4.0.0] - 2022-09-14
 
 ### Changed
