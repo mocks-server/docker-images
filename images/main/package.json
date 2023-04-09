@@ -1,7 +1,7 @@
 {
   "private": true,
   "dependencies": {
-    "@mocks-server/main": "4.0.0"
+    "@mocks-server/main": "4.0.1"
   },
   "scripts": {
     "start": "mocks-server"
