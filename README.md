@@ -1,6 +1,14 @@
+> [!WARNING]
+> **Project discontinued**
+>
+> This project is no longer maintained and has been archived.
+> It will not receive new features, bug fixes, or security updates.
+>
+> Thank you to everyone who used the project, reported issues, and contributed over the years. Your support is greatly appreciated.
+
 # Mocks Server Docker images
 
-Docker images with [Mocks Server](https://www.mocks-server.org) dependencies and command to start it.
+Docker images with [Mocks Server](https://mocks-server.javierbrea.com) dependencies and command to start it.
 
 # Docker images
 
